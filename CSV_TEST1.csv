@@ -1,2 +1,4 @@
-Username;Type;Score;Quiz
-TEST;Admin;0;0
+Username,Type,Score,Quiz
+TEST,Admin,0,0
+TEST2,Quizzer,1,2
+TEST3,User,4,5
