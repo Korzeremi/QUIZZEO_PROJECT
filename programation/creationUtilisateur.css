@@ -1,0 +1,99 @@
+html,body{
+    height: 100%;
+    color: rgb(0, 0, 0);
+    font-family: 'Overpass', sans-serif;
+
+    margin: 5px;
+}
+
+head {
+    display: flex;
+}
+
+body {
+    margin-bottom: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+  
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+
+    border: 2px solid black;
+    border-radius: 30px;
+    /* background-color: ; */
+
+    padding: 75px 500px 75px 0;
+/* 
+    margin-bottom: 50%; */
+}
+
+.logo {
+    margin-top: 20px;
+    padding-right: 200px;
+}
+
+h1 {
+    height: auto;
+    width: 6em;
+
+    font-size: 7em;
+    border: 1px solid black;
+    border-radius: 50px;
+
+    margin: 10px 0 10px 0;
+
+    justify-content: center;
+    text-align: center;
+
+    
+}
+
+.message {
+    display: flex;
+   
+    border: 2px solid black;
+    width: 700px;
+    height: 160px;
+
+    margin: 20px 0px 20px 32%;
+    padding: 30px 15px 0px 15px;
+
+
+}
+
+.message2 {
+    font-size: 25px;
+
+    margin: 0px;
+    justify-content: center;
+
+}
+
+.option {
+    font-size: 1.5em;
+    height: 500px;
+    height: 80px;
+
+    margin: 50px 32% 0 32%;
+
+    border: 2px solid black;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+select {
+    font-size: 1.5rem;
+
+    width: 200px;
+    height: 50px;
+}
