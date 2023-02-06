@@ -17,3 +17,10 @@ Projet BTC QUIZZEO
     - Une page d'ajout permettant de créer des quizz.  
     - Une page permettant de voir tous les quizz, aussi pour la suppression et la modification.
     - Une page de gestion des utilisateurs et des quizzers.  
+
+## **Outils / Langages :**
+- HTML, CSS, Bootstrap pour le frontend.
+- Javascript.
+- PHP pour le backend (POO).
+- MySQL ou MariaDB (PHPMyAdmin).  
+- Git et Github.  
