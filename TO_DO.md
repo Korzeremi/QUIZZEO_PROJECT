@@ -1,1 +1,3 @@
-**ENLEVER TACHE SI EFFECTUEE**
+**ENLEVER TACHE SI EFFECTUEE**  
+- HTML :
+    - Page d'inscription
