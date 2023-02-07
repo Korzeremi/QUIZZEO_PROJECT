@@ -7,6 +7,7 @@
     <title>Création</title>
 
     <link rel="stylesheet" href="creationUtilisateur.css">
+
 </head>
     <header>
         <div class="logo">
@@ -18,7 +19,6 @@
         </div>
     </header>
 <body>
-
     <div class="message">
         <p class="message2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt deserunt deleniti quibusdam magni unde suscipit, iure repellendus ad cupiditate quasi quas vel neque eius recusandae distinctio vitae! Repellendus, ullam sed!</p>
     </div>
@@ -33,18 +33,30 @@
     </div>
 
     <div class="name">
-        <h2>Entrez votre speudo : </h2>
-        <input type="text">
+        <h2 class="name2">Entrez votre pseudo : </h2>
+        <input type="text" class="name3">
     </div>
 
     <div class="mdp">
-        <h2>entrez votre mot de passe : </h2>
-        <input type="text">
+        <h2 class="mdp2">entrez votre mot de passe : </h2>
+        <input type="text" class="mdp3">
     </div>
 
     <div class="confirmation">
-        <button type="submit">Confirmer</button>
+        <button type="submit" style="height: 50px; width: 150px;" class="confirmation2">Confirmer</button>
     </div>
+
+    <?php
+    try 
+    {    
+        $quezzoDB = new PDO('mysql:host=localhost;dbname=db_quezzo_1;charset=utf8','root','root')
+    }
+
+    $userQuery = 'SELECT * FROM utilisateur';
+    $userStatement = $quezzoDB->prepare($userQuery);
+    $userStatement->execute();
+    $user = $userStatement->fetchAll();
+    ?>
     
 </body>
 </html>
