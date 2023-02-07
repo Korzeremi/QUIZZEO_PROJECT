@@ -1,3 +1,11 @@
+:root {
+    --color1: rgb(233, 233, 233);
+    --color2: #BFBFBF;
+    --color3: #404040;
+    --color4: #0D0D0D;
+}
+
+
 html,body{
     height: 100%;
     color: rgb(0, 0, 0);
@@ -17,6 +25,7 @@ body {
     display: flex;
     flex-direction: column;
 
+    background-color: var(--color1);
   
 }
 
@@ -28,6 +37,8 @@ header {
     border-radius: 30px;
 
     padding: 75px 500px 75px 0;
+
+    background-color: var(--color2);
 }
 
 .logo {
