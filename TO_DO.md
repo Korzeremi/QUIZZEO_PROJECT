@@ -1,3 +1,5 @@
 **ENLEVER TACHE SI EFFECTUEE**  
 - HTML :
-    - Page d'inscription
+    - Page d'inscription :
+        - PHP requêtes  
+        - Database  
