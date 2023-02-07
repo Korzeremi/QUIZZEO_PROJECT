@@ -45,18 +45,6 @@
     <div class="confirmation">
         <button type="submit" style="height: 50px; width: 150px;" class="confirmation2">Confirmer</button>
     </div>
-
-    <?php
-    try 
-    {    
-        $quezzoDB = new PDO('mysql:host=localhost;dbname=db_quezzo_1;charset=utf8','root','root')
-    }
-
-    $userQuery = 'SELECT * FROM utilisateur';
-    $userStatement = $quezzoDB->prepare($userQuery);
-    $userStatement->execute();
-    $user = $userStatement->fetchAll();
-    ?>
     
 </body>
 </html>
