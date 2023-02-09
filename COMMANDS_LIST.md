@@ -8,3 +8,7 @@
     - Permet de créer une requête qui va insérer une valeur dans le tableau utilisateur et la colonne pseudo.
 - $res = $connexion->query($req);
     - Permet d'envoyer la requête à la base de données.
+- phpinfo();
+    - Permet d'afficher les infos du client PHP.
+- (php) -> echo date('d/m/Y h:i:s');
+    - Permet d'afficher la date et l'heure.
