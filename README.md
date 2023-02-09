@@ -1,2 +1,6 @@
 # PROJET_QUIZZEO
-Loris, Théo et Rémi
+Nous développons une plateforme nommée QUIZZEO permettant à des joueurs de jouer, créer, gérer et partager des quizz.
+
+Loris  
+Théo  
+Rémi  
