@@ -12,7 +12,7 @@
 
     <div class="affiche1">
         <div class="logo">
-            <img src="" alt="logo.txt">
+            <img src="logoQuiz.png" alt="logo.txt">
         </div>
     
         <div class="titre">
@@ -25,7 +25,7 @@
             <h2>s'inscire</h2>
         </div>
     
-        <div class="connecter">
+        <div class="connection">
             <h2>Se connecter</h2>
         </div>
 
@@ -39,31 +39,30 @@
 </header>
 <body>
 
-    <div class="search">
-        <!-- input tag -->
-        <input id="searchbar" onkeyup="search_animal()" type="text"
-        name="search" placeholder="Search animals..">
-  
-        <!-- ordered list -->
-        <ol id='list'>
-            <li class="animals">Cat</li>
-            <li class="animals">Dog</li>
-        </ol>
+    <div class="entete">
+        <div class="search">
+            <!-- input tag -->
+            <input id="searchbar" onkeyup="Rechercher_ici()" type="text"
+            name="search" placeholder="Rechercher ici..." class="recherche">
+      
+        </div>
+    
+        <div class="option">
+            <div class="option1">
+                <label for="" class="choix">trier par ... : </label>
+                <select>
+                    <option value="default">défault</option>
+                    <option value="favoris">favoris</option>
+                    <option value="alphabétique">alphabétique</option>
+                    <option value="nonFait">Non fait</option>
+                </select>
+            </div>
+    
+            <img src="logoPlus.png" alt="logoPlus">
+            
+        </div>
     </div>
 
-    <div class="option">
-        <label for="" class="choix">trier par ... : </label>
-        <select>
-            <option value="default">défault</option>
-            <option value="user">user</option>
-            <option value="quizzeur">quizzeur</option>
-        </select>
-
-        <div class="plus"></div>
-        
-    </div>
-
-    <div class="bouttonQuiz"></div>
     
 </body>
 </html>
