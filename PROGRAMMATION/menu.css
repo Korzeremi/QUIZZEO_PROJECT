@@ -4,6 +4,7 @@
     --color3: #404040;
     --color4: #0D0D0D;
     --texte: rgb(0, 0, 0);
+    --titre: white;
 }
 
 html,body{
@@ -15,6 +16,14 @@ html,body{
 
     background-color: var(--color1);
     color: var(--texte);
+}
+
+html.nuit {
+    --texte: white;
+    --color1: #626262;
+    --color3: rgb(95, 86, 86);
+    --color4: white;
+    --titre: black;
 }
 
 head {
@@ -49,6 +58,8 @@ header {
     /* border: 2px solid black; */
     width: 250px;
     height: 100px;
+
+    color: var(--titre);
 }
 
 .logo > img {
@@ -58,6 +69,9 @@ header {
     margin-top: 15px;
 }
 
+.titre {
+    font-size: 2em;
+}
 
 
 .affiche2 {
@@ -66,10 +80,10 @@ header {
     align-items: center;
 
     padding: 5px;
-    margin-left: 400px;
+    margin-left: 350px;
 
     /* border: 2px solid black; */
-    width: 400px;
+    width: 500px;
     height: 100px;
 
 }
@@ -106,6 +120,31 @@ header {
 
 .button {
     margin-left: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.button:hover {
+    cursor:pointer;
+    background-color: #516375;
+
+    border-radius: 20px;
+
+    /* transform: scale(1.02); */
+    transition: all 0.5s ease-out;
+}
+
+#themeLogo {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
 .entete {
