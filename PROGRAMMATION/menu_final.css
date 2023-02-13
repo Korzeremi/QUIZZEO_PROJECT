@@ -1,0 +1,221 @@
+/* HTML,BODY ####################################################################################### */
+
+html, body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+/* HEADER ########################################################################################## */
+
+header > .header_box {
+    display: flex;
+    background-color: #1B3B6F;
+    width: 100%;
+    height: 80px;
+}
+
+header > .header_box > .quizzeo_logo {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+}
+
+header > .header_box > .nav_part {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header > .header_box > .nav_part > .quizzeo_title {
+    color: #ffffff;
+}
+
+header > .header_box > .nav_part > .nav_btns {
+    display: flex;
+}
+
+header > .header_box > .nav_part > .nav_btns > .account_btns {
+    display: flex;
+    align-items: center;
+}
+
+header > .header_box > .nav_part > .nav_btns > .account_btns > .sub_btn {
+    height: 25px;        
+    font-size:small;
+    margin-right: 10px;
+    padding: 1px 10px;
+    border-radius: 30px;
+    border: 0px transparent;
+    background-color: #f4f2f2;
+}
+
+header > .header_box > .nav_part > .nav_btns > .account_btns > .sub_btn:hover {
+    background-color: #c0c0c0;
+}
+
+header > .header_box > .nav_part > .nav_btns > .account_btns > .log_btn {
+    height: 25px;
+    font-size:small;
+    margin-right: 10px;
+    padding: 1px 10px;
+    border-radius: 30px;
+    border: 0px transparent;
+    background-color: #f4f2f2;
+}
+
+header > .header_box > .nav_part > .nav_btns > .account_btns > .log_btn:hover {
+    background-color: #c0c0c0;
+}
+
+header > .header_box > .nav_part > .nav_btns > .dark_mode {
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+    border: transparent 0px;
+}
+
+/* BODY ########################################################################################## */
+
+body {
+    background: #FFFFFF;
+    font-family: 'Overpass', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+    /* BTN_SECTION ########################################################################################## */
+
+    body > .btn_section {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        /* background-color: red; */
+        height: 40px;
+        margin-top: 20px;
+    }
+
+    body > .btn_section > .searchbar_section {
+        /* background-color: violet; */
+        display: flex;
+        align-items: center;
+    }
+
+    body > .btn_section > .searchbar_section > .searchbar {
+        position: relative;
+        font-family: 'Overpass', sans-serif;
+        font-size:small;
+        background-color: #f1ecec;
+        border: none;
+        color: #646464;
+        padding: 10px 30px;
+        border-radius: 30px;
+        width:240px;
+        /* top:30px; */
+        transition: all ease-in-out .5s;
+        /* background-color: rgb(138, 52, 219); */
+    }
+
+    body > .btn_section > .filter {
+        position: absolute;
+        right: 0px;
+        display: flex;
+        margin-left: auto;
+        margin-right: 0px;
+        flex-direction: row;
+        width: 9%;
+        height: 40px;
+        /* border: 2px solid black;  */
+        /* background-color: cyan; */
+        /* width: 100px; */
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 2%;
+    }
+
+    body > .btn_section > .filter > .add_btn > img {
+        margin-top : 8px;
+        margin-bottom: 0px;
+        /* margin-left: 13px; */
+        height: 50px;
+        /* background-color: pink; */
+    }
+
+    /* body > .btn_section > .filter > .filter_options {
+        background-color: rgb(162, 46, 216);
+    } */
+
+    body > .btn_section > .filter > .filter_options > .filter_selection {
+        background-color: #F2F2F2;
+        border-radius: 30px;
+        text-align: center;
+    }
+
+    /* ########################################################################################## */
+
+    /* QUIZ_SECTION ############################################################################# */
+
+    body > .quiz_section {
+        /* background-color: #F1F1F1; */
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+
+    body > .quiz_section > .theme_txt {
+        color: #000;
+    }
+
+    body > .quiz_section > .quiz_line1 {
+        /* background-color: red; */
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        height: 260px;
+    }
+
+        /* QUIZZ_LIST */
+
+        body > .quiz_section > .quiz_line1 > .quiz1 {
+            background-color: blue;
+            border-radius: 10px;
+            margin-right: 1.5%;
+        }
+
+        body > .quiz_section > .quiz_line1 > .quiz2 {
+            background-color: green;
+            border-radius: 10px;
+            margin-right: 1.5%;
+        }
+
+        body > .quiz_section > .quiz_line1 > .quiz3 {
+            background-color: pink;
+            border-radius: 10px;
+            margin-right: 1.5%;
+        }
+
+        body > .quiz_section > .quiz_line1 > .quiz4 {
+            background-color: rgb(18, 186, 130);
+            border-radius: 10px;
+            margin-right: 1.5%;
+        }
+
+        body > .quiz_section > .quiz_line1 > .quiz5 {
+            background-color: rgb(163, 31, 154);
+            border-radius: 10px;
+            margin-right: 1.5%;
+        }
+
+        body > .quiz_section > .quiz_line1 > .quiz6 {
+            background-color: rgb(19, 172, 27);
+            border-radius: 10px;
+            margin-right: 1.5%;
+        }
+        
+        /* ########################################################################################### */
+
+    /* ########################################################################################## */
+
+/* ########################################################################################## */
