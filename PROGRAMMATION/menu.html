@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZEO</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<header>
+
+    <div class="affiche1">
+        <div class="logo">
+            <img src="logoQuiz.png" alt="logo.txt">
+        </div>
+    
+        <div class="titre">
+            <h1>QUIZZEO</h1>
+        </div>
+    </div>
+
+    <div class="affiche2">
+        <div class="inscription">
+            <h2>s'inscire</h2>
+        </div>
+    
+        <div class="connection">
+            <h2>Se connecter</h2>
+        </div>
+
+        <div class="button">
+            <button for="themeSwitch" id="themeLogo" style="font-size: 90px;">&#9789;</button>
+        </div>
+    </div>
+
+
+
+</header>
+<body>
+
+    <div class="entete">
+        <div class="search">
+            <!-- input tag -->
+            <input id="searchbar" onkeyup="Rechercher_ici()" type="text"
+            name="search" placeholder="Rechercher ici..." class="recherche">
+      
+        </div>
+    
+        <div class="option">
+            <div class="option1">
+                <label for="" class="choix">trier par ... : </label>
+                <select>
+                    <option value="default">défault</option>
+                    <option value="favoris">favoris</option>
+                    <option value="alphabétique">alphabétique</option>
+                    <option value="nonFait">Non fait</option>
+                </select>
+            </div>
+    
+            <img src="logoPlus.png" alt="logoPlus">
+            
+        </div>
+    </div>
+
+    <div class="quiz">
+        <div class="titre2">
+            <h2>
+                Nos thèmes
+            </h2>
+        </div>
+
+        <div class="boite">
+            <div class="container1">
+                <img src="volleyBlock.png" alt="photo">
+                <h2 class="soustitre1">Volley-ball</h2>
+                <div id="texte1">
+                    <p>le volley c'est génial</p>
+                </div>
+                <p class="soustexte1">créer par Quizzeo le 11/01/23</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script src="menu.js"></script>
+
+</body>
+</html>
