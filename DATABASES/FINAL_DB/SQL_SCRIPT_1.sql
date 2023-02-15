@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 DROP DATABASE IF EXISTS test;
 CREATE DATABASE test;
 USE test;
+=======
+DROP DATABASE IF EXISTS quizzeo;
+CREATE DATABASE quizzeo;
+USE quizzeo;
+>>>>>>> 7ca30d783092267c243123317ea0b293e535183d
 
 CREATE TABLE Quizz(
    id INT,
