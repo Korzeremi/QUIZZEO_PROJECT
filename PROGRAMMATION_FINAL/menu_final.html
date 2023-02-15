@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZEO HOMEPAGE</title>
+    <link rel="stylesheet" href="menu_final.css">
+</head>
+<!-- HEAD_END -->
+
+<!-- HEADER -->
+<header>
+    <div class="header_box">
+        <div class="home_btn">
+            <button class="home" onclick="window.location.href = 'menu_final.html';"></button>
+            <img alt="quizzeo_logo" class="quizzeo_logo" src="logo_final.png">
+        </div>
+        <div class="nav_part">
+            <h1 class="quizzeo_title">QUIZZEO</h1>
+            <div class="nav_btns">
+                <div class="account_btns">
+                    <button class="sub_btn">S'inscrire</button>
+                    <button class="log_btn">Se connecter</button>
+                </div>
+                <button class="dark_mode"></button>
+            </div>
+            <script>                /* mettre  script dark_mode */
+            </script>
+        </div>
+    </div>
+</header>
+<!-- HEADER_END -->
+
+<!-- BODY -->
+<body>
+    <div class="btn_section">
+        <div class="searchbar_section"><input class="searchbar" onkeyup="Rechercher_ici()" type="text" name="search" placeholder="Rechercher ici..."></div>
+        <div class="filter">
+            <div class="filter_options">
+                <select class="filter_selection">
+                    <option value="default">Trier ...</option>
+                    <option value="alphabétique">Alphabétique</option>
+                    <option value="favoris">Favoris</option>
+                    <option value="nonFait">Non fait</option>
+                </select>
+            </div>
+            <div class="add_btn"><img src="logoPlus.png" alt="logoPlus"></div>
+        </div>
+    </div>
+    <div class="quiz_section">
+        <div class="theme_txt"><h2>Nos quizz</h2></div>
+        <div class="quiz_line1">
+            <div class="quiz1">
+                <img src="volleyBlock.png" alt="photo">
+                <h2 class="quiz_title">Volley-ball</h2>
+                <p class="quiz_descr">le volley c'est génial</p>
+                <p class="quiz_modify">créer par Quizzeo le 11/01/23</p>
+            </div>
+            <div class="quiz2">
+                <img src="volleyBlock.png" alt="photo">
+                <h2 class="quiz_title">Volley-ball</h2>
+                <p class="quiz_descr">le volley c'est génial</p>
+                <p class="quiz_modify">créer par Quizzeo le 11/01/23</p>
+            </div>
+            <div class="quiz3">
+                <img src="volleyBlock.png" alt="photo">
+                <h2 class="quiz_title">Volley-ball</h2>
+                <p class="quiz_descr">le volley c'est génial</p>
+                <p class="quiz_modify">créer par Quizzeo le 11/01/23</p>
+            </div>
+            <div class="quiz4">
+                <img src="volleyBlock.png" alt="photo">
+                <h2 class="quiz_title">Volley-ball</h2>
+                <p class="quiz_descr">le volley c'est génial</p>
+                <p class="quiz_modify">créer par Quizzeo le 11/01/23</p>
+            </div>
+            <div class="quiz5">
+                <img src="volleyBlock.png" alt="photo">
+                <h2 class="quiz_title">Volley-ball</h2>
+                <p class="quiz_descr">le volley c'est génial</p>
+                <p class="quiz_modify">créer par Quizzeo le 11/01/23</p>
+            </div>
+            <div class="quiz6">
+                <img src="volleyBlock.png" alt="photo">
+                <h2 class="quiz_title">Volley-ball</h2>
+                <p class="quiz_descr">le volley c'est génial</p>
+                <p class="quiz_modify">créer par Quizzeo le 11/01/23</p>
+            </div>
+        </div>
+    </div>
+    <div class="log_popup">
+        <div class="log_part">
+            <div class="log_title"><h1>Se connecter</h1></div>
+            <div class="log_user_title"><label><b>Nom d'utilisateur</b></label></div>
+            <div class="log_user_input"><input type="text" placeholder="Entre ton nom d'utilisateur" name="username" required></div>
+            <div class="log_userpasswd_title"><label><b>Mot de passe</b></label></div>
+            <div class="log_userpasswd_input"><input type="text" placeholder="Entrer ton mot de passe" name="userpasswd" required></div>
+            <div class="log_submit_btn"><input type="submit" id='submit' value="SE CONNECTER"></div>
+            <div class="log_cancel_btn"><input type="submit" id='submit' value="ANNULER"></div>
+        </div>
+    </div>
+    <div class="sub_popup">
+        <div class="sub_part">
+            <div class="sub_title"><h1>S'inscrire</h1></div>
+            <div class="sub_usermail_title"><label><b>Adresse mail</b></label></div>
+            <div class="sub_usermail_input"><input type="text" placeholder="Entre ton email" name="usermail" required></div>
+            <div class="sub_user_title"><label><b>Nom d'utilisateur</b></label></div>
+            <div class="sub_user_input"><input type="text" placeholder="Entre ton nom d'utilisateur" name="username" required></div>
+            <div class="sub_userpasswd_title"><label><b>Mot de passe</b></label></div>
+            <div class="sub_userpasswd_input"><input type="text" placeholder="Entrer ton mot de passe" name="userpasswd" required></div>
+            <div class="sub_option">
+                <label for="" class="sub_choice">Choississez votre type de profil : </label>
+                <select name="userType">
+                    <option value="Utilisateur">Utilisateur</option>
+                    <option value="Administrateur">Administrateur</option>
+                    <option value="Quizzeur">Quizzeur</option>
+                </select>
+            </div>
+            <div class="sub_submit_btn"><input type="submit" id='submit' value="SE CONNECTER"></div>
+            <div class="sub_cancel_btn"><input type="submit" id='submit' value="ANNULER"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="menu_final.js"></script>
+</body>
+<!-- BODY_END -->
+
+</html>
+<!-- HTML_END -->
