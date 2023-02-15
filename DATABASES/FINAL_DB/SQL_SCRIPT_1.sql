@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS test;
+CREATE DATABASE test;
+USE test;
+
 CREATE TABLE Quizz(
    id INT,
    titre VARCHAR(50) ,
