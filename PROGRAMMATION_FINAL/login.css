@@ -1,0 +1,77 @@
+/* body{
+    background: #ffffff;
+    font-family: 'Overpass', sans-serif;
+   }
+
+   .header_box {
+        display: flex;
+        background-color: #1B3B6F;
+        width: 100%;
+        height: 80px;
+   }
+
+   .quizzeo_logo {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+   }
+
+   .quizzeo_title {
+    color: #ffffff;
+   }
+
+   .nav_part {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   }
+
+   .dark_mode {
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+    border: transparent 0px;
+   } */
+
+   #container{
+    width:400px;
+    margin:0 auto;
+    margin-top:10%;
+   }
+
+   form {
+    width:100%;
+    padding: 30px;
+    background: #fff;
+   }
+
+   #container h1{
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10px;
+   }
+   
+   input[type=text], input[type=firstname] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+   }
+   
+   input[type=submit] {
+    background-color: #1B3B6F;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+   }
+
+   input[type=submit]:hover {
+    background-color: white;
+    color: #1B3B6F;
+    border: 1px solid #1B3B6F;
+}
