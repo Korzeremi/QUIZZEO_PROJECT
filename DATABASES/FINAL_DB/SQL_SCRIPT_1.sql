@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS quizzeo;
+CREATE DATABASE quizzeo;
+USE quizzeo;
+
 CREATE TABLE Quizz(
    id INT,
    titre VARCHAR(50) ,
