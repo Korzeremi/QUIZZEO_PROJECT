@@ -12,8 +12,8 @@
     <body>
 
         <a href="admin_help.php">Aide</a>
-        <a target="_blank" rel="noopener noreferrer" href="http://localhost/phpmyadmin/">phpMyAdmin</a>
         <a href="visitor_homepage.php">Page d'accueil</a>
+        <a target="_blank" rel="noopener noreferrer" href="http://localhost/phpmyadmin/">Gestion Base de données</a>
         <a href="admin_quiz_panel.php">Gestion des quizz</a><br>
         <a href="admin_user_add.php">Ajouter utilisateur</a><br>
 
