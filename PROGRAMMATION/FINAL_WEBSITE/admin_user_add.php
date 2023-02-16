@@ -10,6 +10,9 @@
 </head>
 
 <body>
+
+    <a href="admin_panel.php">Retourner au panneau d'administration</a>
+
     <?php
 
         // Link to the database

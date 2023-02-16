@@ -44,7 +44,6 @@
             if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 $pseudo = $_POST['pseudo'];
                 $mail = $_POST['email'];
-                $passwd = $_POST['password'];
                 $role = $_POST['role'];
                 $showErrors = array();
 
@@ -54,9 +53,9 @@
 
                 // Sending request to modify user's infos
                 if(empty($showErrors)){
-                    $req2 = "UPDATE utilisateur SET pseudo = ?, email = ?, password = ?, role = ? WHERE id = ?";
+                    $req2 = "UPDATE utilisateur SET pseudo = ?, email = ?, role = ? WHERE id = ?";
                     $res2 = $db->prepare($req2);
-                    $res2->bind_param("ssssi", $pseudo, $mail, $passwd, $role, $userId);
+                    $res2->bind_param("ssssi", $pseudo, $mail, $role, $userId);
                     if($res2->execute()){
                         echo "L'utilisateur a été modifié avec succès";
                         header('Location: admin_panel.php');
@@ -80,8 +79,6 @@
             <input type="text" name="pseudo" id="pseudo" value="<?php echo $row['pseudo']; ?>"/><br/>
             <label for="email">Email :</label>
             <input type="text" name="email" id="email" value="<?php echo $row['email']; ?>"/><br/>
-            <label for="passwd">Mot de passe :</label>
-            <input type="text" name="password" id="password" value="<?php echo $row['password']; ?>"/><br/>
             <label for="role">Rôle :</label>
             <select for="role" name="role">
                 <option value="Administrateur">Administrateur</option>
