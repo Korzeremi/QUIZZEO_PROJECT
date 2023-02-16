@@ -85,6 +85,7 @@
                 <option value="Utilisateur" default>Utilisateur</option>
                 <option value="Quizzeur">Quizzeur</option>
             </select><br>
+            <p>ATTENTION ! REGARDEZ BIEN LE ROLE ATTRIBUE !</p>
             <input type="submit" value="Modifier l'utilisateur"/>
         </form>
     </body>
