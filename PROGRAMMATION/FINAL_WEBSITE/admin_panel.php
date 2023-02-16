@@ -11,7 +11,9 @@
 
     <body>
 
-        <a href="admin_help.php">Aide</a><br>
+        <a href="visitor_homepage.php">Page d'accueil</a>
+        <a href="admin_help.php">Aide</a>
+        <a href="admin_user_add.php">Ajouter utilisateur</a><br>
 
         <!-- Php -->
         <?php
