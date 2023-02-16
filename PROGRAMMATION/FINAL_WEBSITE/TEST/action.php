@@ -1,10 +1,10 @@
 <?php
 //  print_r($_POST);
 
-$conn = new PDO('mysql:host=localhost;dbname=add_more', 'root', '')
+$conn = new PDO('mysql:host=localhost;dbname=add_more', 'root', '');
 foreach($_POST['product_name'] as $key => $value){
-    $sql = 'INSERT INTO item(name, price, quantity) VALUE (:name, :price, :qty)'
-    $stmt = $conn->prepare($sql)
+    $sql = 'INSERT INTO item(name, price, quantity) VALUE (:name, :price, :qty)';
+    $stmt = $conn->prepare($sql);
     $stmt ->execute([
         'name' => $value,
         'price' => $_POST['product_price'][key],
@@ -13,7 +13,5 @@ foreach($_POST['product_name'] as $key => $value){
 }
 
 echo 'Item inserted successfully!';
-
-
 
 ?>
