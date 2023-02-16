@@ -55,7 +55,7 @@
                 if(empty($showErrors)){
                     $req2 = "UPDATE utilisateur SET pseudo = ?, email = ?, role = ? WHERE id = ?";
                     $res2 = $db->prepare($req2);
-                    $res2->bind_param("ssssi", $pseudo, $mail, $role, $userId);
+                    $res2->bind_param("sssi", $pseudo, $mail, $role, $userId);
                     if($res2->execute()){
                         echo "L'utilisateur a été modifié avec succès";
                         header('Location: admin_panel.php');
