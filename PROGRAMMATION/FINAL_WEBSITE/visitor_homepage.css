@@ -51,6 +51,26 @@ header > .header_box > .nav_part > .nav_btns > .account_btns {
     align-items: center;
 }
 
+header > .header_box > .nav_part > .nav_btns > .account_btns > .pnl_btn > .adm_btn {
+    height: 25px;        
+    font-size:small;
+    margin-right: 10px;
+    padding: 1px 10px;
+    border-radius: 30px;
+    border: 0px transparent;
+    background-color: #FFFFFF;
+    transition: all ease-in-out .5s;
+}
+
+header > .header_box > .nav_part > .nav_btns > .account_btns > .pnl_btn > .adm_btn:hover {
+    transform: scale(1.075);
+}
+
+header > .header_box > .nav_part > .nav_btns > .account_btns > .pnl_btn > .adm_btn:active {    
+    transition: all ease-in-out .1s;
+    transform: scale(1.25);
+}
+
 header > .header_box > .nav_part > .nav_btns > .account_btns > .sub_btn {
     height: 25px;        
     font-size:small;

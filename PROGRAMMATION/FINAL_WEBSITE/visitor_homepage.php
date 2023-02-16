@@ -21,6 +21,7 @@
             <h1 class="quizzeo_title">QUIZZEO</h1>
             <div class="nav_btns">
                 <div class="account_btns">
+                    <a class="pnl_btn" href="admin_panel.php"><button class="adm_btn">ADMIN TEST</button></a>
                     <button class="sub_btn">S'inscrire</button>
                     <button class="log_btn">Se connecter</button>
                 </div>
