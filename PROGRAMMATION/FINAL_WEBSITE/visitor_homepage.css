@@ -298,6 +298,8 @@ body::-webkit-scrollbar {
             margin-right: 1.5%;
         }
 
+        /* LONGIN ############################################################################################################################ */
+
         body > form > .log_popup {
             background-color: transparent;
             position: relative;
@@ -369,6 +371,8 @@ body::-webkit-scrollbar {
             border-radius: 20px;
         } */
 
+
+        /* SUBMIT ################################################################################################################# */
         body > form > .sub_popup {
             background-color: transparent;
             position: absolute;
