@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="homepage.css">
+        <link rel="stylesheet" type="text/css" href="test.css">
         <title>ACCUEIL QUIZZEO </title>
 
     </head>
@@ -14,19 +14,12 @@
 <body>
     <header>
         <section class="tete">
-            <!-- <h1>QUIZZEO</h1> -->
-            <div class="logo">
-                <img src="logo.png" alt="logo">
-            </div>
-            <div class="X">
-                <div class="connect">
-                    <a href="subscription.php" ><button class="subscribebtn">s'inscrire</button></a>
-                    <a href="connection.php"><button class="subscribebtn">Se connecter</button></a>
-                </div>
-                <div class="mode_btn">
-                        <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
-                    <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
-                </div>
+            <a href="homepage.php"><img src="" alt="logo"></a>
+            <a href="subscription.php" ><button>s'inscrire</button></a>
+            <a href="connection.php"><button>Se connecter</button></a>
+            <div class="mode_btn">
+                <input type="checkbox" name="theme-mode">
+                <!-- <span class="slider"></span> -->
             </div>
         </section>
 
@@ -72,17 +65,9 @@
         ?>
 
         <script>
-            const html = document.getElementsByTagName("html")[0];
-            const themeSwicth = document.getElementById("themeLogo");
-            themeSwicth.addEventListener("click", () => {
-            html.classList.toggle("nuit");
-            if (html.classList.contains("nuit")) {
-                themeSwicth.innerHTML = 'LIGHT'.fontsize(4);
-            } else {
-                themeSwicth.innerHTML = 'DARK'.fontsize(4);
+            function setDarkMode(Event){
             }
-        });
-        </script>  
+        </script>
 
 </body>
     
