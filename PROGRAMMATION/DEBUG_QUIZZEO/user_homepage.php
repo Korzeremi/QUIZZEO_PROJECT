@@ -4,17 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user_homepage.css">
     <title>QUIZZEO</title>
 </head>
 <body>
-    <a href="user_homepage.php"><img alt="logo"></a>
-    <a href="disconnect.php"><input type="button" value="Se déconnecter"></a>
-    <a href="user_profile.php"><input type="button" value="Mon profil"></a> 
+    <header>
+        <div class="tete">
+            <div class="logo">
+                <a href="admin_homepage.php"><img src="logo.png" alt="logo"></a>
+            </div>
+            <div class="connect_btn">
+                <div class="connect">
+                    <a href="disconnect.php"><input type="button" value="Se déconnecter" class="button_head"></a>
+                </div>
+                <div class="mode_btn">
+                    <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
+                    <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="button">
+        <a href="user_profile.php"><input type="button" value="Mon profil" class="button_ajout"></a> 
+    </div>
     
-    <form action="user_search.php" method="post">
-            <input type="text" id="searchbar" name="searchbar">
-            <input type="submit" value="Rechercher"></input>
-    </form>
+    <div class="navbar">
+        <div class="h2">
+            <a href="homepage.php"><h2>Nos quizs</h2></a>
+        </div>
+        <div class="searchform">
+            <form action="homepage_search.php" method="post">
+                <input class="searchbar" type="text" id="searchbar" name="searchbar" placeholder="Rechercher par nom">
+                <input class="searchbtn" type="submit" value="Rechercher"></input>
+            </form>
+        </div>
+        <div class="sortbyselect">
+            <select class="sortby" name="sortby" id="sortbyselectid">
+                <option selected="" value="">Trier par</option>
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+            </select>
+        </div>
+</div>
 
     <h2>Page d'accueil utilisateur</h2>
 
@@ -49,5 +82,19 @@
             
             $conn->close();
     ?>
+
+    <script>
+        const html = document.getElementsByTagName("html")[0];
+        const themeSwicth = document.getElementById("themeLogo");
+        themeSwicth.addEventListener("click", () => {
+        html.classList.toggle("nuit");
+        if (html.classList.contains("nuit")) {
+            themeSwicth.innerHTML = 'LIGHT'.fontsize(4);
+        } else {
+            themeSwicth.innerHTML = 'DARK'.fontsize(4);
+        }
+    });
+    </script>  
+    
 </body>
 </html>

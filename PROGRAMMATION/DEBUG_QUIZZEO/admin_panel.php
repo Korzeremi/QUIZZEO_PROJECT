@@ -35,7 +35,7 @@
 
     <h2>Page d'administration</h2>
     
-    <!-- <?php   
+    <?php   
         session_start();
 
             $server="localhost";
@@ -96,7 +96,7 @@
     }else{
         echo " ";
     }
-?> -->
+?>
 
 
 <script>
@@ -111,5 +111,6 @@
     }
 });
 </script>  
+
 </body>
 </html>
