@@ -1,16 +1,17 @@
-* {
+*{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--textcolor);
 }
 
-:root {
-    --color1: rgb(233, 233, 233);
-    --header: #BFBFBF;
-    --color3: #404040;
-    --color4: #0D0D0D;
-    --texte: rgb(0, 0, 0);
-    --body: rgb(240, 240, 240);
+:root{
+    --bgcolor: #f2f2f2;
+    --textcolor: #0D0D0D;
+    --headercolor: #3671BF;
     --headersecondarycolor: #27538C;
+    --maincolor: #A9D943;
+    --secondarycolor: #98BF45;
 }
+
 
 /* HTML,body ************************************************************************/
 
@@ -19,15 +20,16 @@ html {
 }
 
 html.nuit {
-    --texte: white;
+    /* --texte: white;
     --color1: rgb(31, 29, 29);
     --color3: rgb(95, 86, 86);
     --color4: rgb(0, 0, 0);
-    --body: rgb(34, 34, 34);
+    --body: rgb(34, 34, 34); */
+    --bgcolor: rgb(53, 51, 51);
 }
 
-body {
-    margin: 0;
+body{
+    background-color: var(--bgcolor);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,8 +38,6 @@ body {
     width: 100%;
     margin-left: 0px;
     margin-top: 0px;
-    color: var(--texte);
-    background-color: var(--body);
 }
 
 /* HEADER ******************************************************************************/
@@ -50,8 +50,10 @@ header {
     margin-bottom: 2%;
     width: 99.8%;
     height: 7em;
-    background-color: var(--header);
+    background-color: var(--headercolor);
 }
+
+
 
 .tete {
     width: 100%;
@@ -64,6 +66,8 @@ header {
     padding: 0.1%;
 }
 
+/* LOGO ****************************************************************/
+
 .logo {
     /* border: 2px solid black; */
     height: 100%;
@@ -75,8 +79,9 @@ header > .tete > .logo > img {
     height: 100%;
 }
 
+/* BUTTON CONNECT *******************************************************/
 
-.X {
+.connect_btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,11 +92,12 @@ header > .tete > .logo > img {
     width: 30%;
 }
 
+
 .connect {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 60%;
     height: 70%;
 }
@@ -104,7 +110,7 @@ header > .tete > .logo > img {
     text-align: center;
     margin: 15px;
     padding: 15px 20px;
-    opacity: 0.55;
+    opacity: 0.65;
     transition: 0.15s;
     border-radius: 2.5px;
     cursor: pointer;
@@ -116,10 +122,12 @@ header > .tete > .logo > img {
     opacity: 1;
 }
 
-header > .tete > .X > .connect > button {
+header > .tete > .connect_btn > .connect > button {
     width: 7em;
     height: 3.5em;
 }
+
+/* DARK MODE  ************************************************************/
 
 .mode_btn {
     /* border: 2px solid black; */
@@ -130,7 +138,7 @@ header > .tete > .X > .connect > button {
     height: 35%;
 } 
 
-header > .tete > .X > .mode_btn > button{
+header > .tete > .connect_btn > .mode_btn > button{
     width: 1em;
     height: 0.4em;
     display: flex;
@@ -142,13 +150,13 @@ header > .tete > .X > .mode_btn > button{
 }
 
 
-header > .tete > .X > .mode_btn > button > h3 {
+header > .tete > .connect_btn > .mode_btn > button > h3 {
     font-size: 20%;
 
 }
 
 
-header > .tete > .X > .mode_btn > button:hover{
+header > .tete > .connect_btn > .mode_btn > button:hover{
     cursor:pointer;
     border-radius: 20px;
 
@@ -157,8 +165,82 @@ header > .tete > .X > .mode_btn > button:hover{
 }
 
 
-/*  ***************************************************************/
+/* NAVBAR ***************************************************************/
 
-h2 {
-    color: green;
+.navbar{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
 }
+
+.h2 > a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.h2 > a:hover{
+    text-decoration: underline;
+}
+
+.searchform{
+    margin: 0;
+}
+
+.searchbar{
+    height: 2.5em;
+    width: 15em;
+    color: var(--textcolor);
+    border: none;
+    border-radius: 2.5px;
+    border: 1px solid black;
+}
+
+.searchbtn{
+    background-color: var(--maincolor);
+    border: solid var(--secondarycolor) 1px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding: 7px 5px 8px 5px;
+    opacity: 0.65;
+    transition: 0.15s;
+    border-radius: 2.5px;
+    cursor: pointer;
+}
+
+.searchbtn:hover{
+    opacity: 1;
+}
+
+.sortby{
+    background-color: white;
+    border: none;
+}
+
+/* GRID ***********************************************************************/
+
+.grid{
+    background-color: green;
+    height: 150px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+}
+
+.quiz{
+    background-color: red;
+    height: 300px;
+    cursor: pointer;
+}
+
+.quiz:last-of-type{
+    background-color: blue;
+    margin-bottom: 50px;
+}   
