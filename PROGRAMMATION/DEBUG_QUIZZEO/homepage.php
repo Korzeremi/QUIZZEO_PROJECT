@@ -50,12 +50,12 @@
                     <option value="c">c</option>
                 </select>
             </div>
-    </div>
+        </div>
         <div class="grid">
             <div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div>
         </div>
 
-        <?php
+        <!-- <?php
             $server="localhost";
             $username="root";
             $password="root";
@@ -82,7 +82,7 @@
             }
             
             $conn->close();
-        ?>
+        ?> -->
 
         <script>
             const html = document.getElementsByTagName("html")[0];

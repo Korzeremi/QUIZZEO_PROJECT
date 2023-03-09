@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="connection_status.css">
     <title>CONNEXION</title>
 </head>
 <body>
+
+    <header>
+        <section class="tete">
+            <!-- <h1>QUIZZEO</h1> -->
+            <div class="logo">
+                <img src="logo.png" alt="logo">
+            </div>
+            <div class="mode_btn">
+                        <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
+                    <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
+            </div>
+            </div>
+        </section>
+
+    </header>
+    
 <?php
     $server="localhost";
     $username="root";
@@ -61,6 +78,24 @@
     }
     $conn->close();
 ?>
-<br><a href="connection.php"><input type="button" value="Retour à la page de connexion"></a>
+
+
+<div class="button">
+    <br><a href="connection.php"><input type="button" value="Retour à la page de connexion"></a>
+</div>
+
+<script>
+    const html = document.getElementsByTagName("html")[0];
+    const themeSwicth = document.getElementById("themeLogo");
+    themeSwicth.addEventListener("click", () => {
+    html.classList.toggle("nuit");
+    if (html.classList.contains("nuit")) {
+        themeSwicth.innerHTML = 'LIGHT'.fontsize(4);
+    } else {
+        themeSwicth.innerHTML = 'DARK'.fontsize(4);
+    }
+});
+</script> 
+
 </body>
 </html>

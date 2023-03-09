@@ -2,13 +2,30 @@
     <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="account.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="admin_user_remove.css" media="screen" type="text/css" />
         <title>SUPPRESSION UTILISATEUR</title>
     </head>
 
     <body>
 
-       <a href="admin_panel.php"><br>Retourner au panneau d'administration</a>;
+        <header>
+            <section class="tete">
+                <!-- <h1>QUIZZEO</h1> -->
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                </div>
+                <div class="mode_btn">
+                            <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
+                        <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
+                </div>
+                </div>
+            </section>
+    
+        </header>
+
+       <div class="button">
+        <a href="homepage.php"><input type="button" value="Retourner au panneau d'administration" class="button_ajout"></a>
+    </div>
     
         <?php
 
@@ -35,5 +52,20 @@
             $db->close();
 
         ?>
+
+        <script>
+            const html = document.getElementsByTagName("html")[0];
+            const themeSwicth = document.getElementById("themeLogo");
+            themeSwicth.addEventListener("click", () => {
+            html.classList.toggle("nuit");
+            if (html.classList.contains("nuit")) {
+                themeSwicth.innerHTML = 'LIGHT'.fontsize(4);
+            } else {
+                themeSwicth.innerHTML = 'DARK'.fontsize(4);
+            }
+        });
+        </script> 
+
+
     </body>
 </html>
