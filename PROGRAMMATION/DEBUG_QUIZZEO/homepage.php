@@ -18,7 +18,7 @@
             <div class="logo">
                 <img src="logo.png" alt="logo">
             </div>
-            <div class="X">
+            <div class="connect_btn">
                 <div class="connect">
                     <a href="subscription.php" ><button class="subscribebtn">s'inscrire</button></a>
                     <a href="connection.php"><button class="subscribebtn">Se connecter</button></a>
@@ -32,17 +32,30 @@
 
     </header>
 
+    <div class="navbar">
+            <div class="h2">
+                <a href="homepage.php"><h2>Nos quizs</h2></a>
+            </div>
+            <div class="searchform">
+                <form action="homepage_search.php" method="post">
+                    <input class="searchbar" type="text" id="searchbar" name="searchbar" placeholder="Rechercher par nom">
+                    <input class="searchbtn" type="submit" value="Rechercher"></input>
+                </form>
+            </div>
+            <div class="sortbyselect">
+                <select class="sortby" name="sortby" id="sortbyselectid">
+                    <option selected="" value="">Trier par</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div>
+        </div>
 
-    
-
-        <form action="homepage_search.php" method="post">
-            <input type="text" id="searchbar" name="searchbar">
-            <input type="submit" value="Rechercher"></input>
-        </form>
-
-        <h2>Page d'accueil visiteur</h2>
-
-        <?php
+        <!-- <?php
             $server="localhost";
             $username="root";
             $password="root";
@@ -69,7 +82,7 @@
             }
             
             $conn->close();
-        ?>
+        ?> -->
 
         <script>
             const html = document.getElementsByTagName("html")[0];
