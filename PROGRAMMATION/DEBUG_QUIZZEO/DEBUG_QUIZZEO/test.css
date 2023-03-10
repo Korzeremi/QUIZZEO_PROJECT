@@ -1,0 +1,36 @@
+/* HTML,body ************************************************************************/
+
+html {
+    
+    height: 100%;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+/* HEADER ******************************************************************************/
+
+header {
+    display: flex;
+    border: 2px solid black;
+    padding: 0.1%;
+    margin-bottom: 2%;
+    width: 99.8%;
+}
+
+.tete {
+    width: 100%;
+    border: 2px solid black;
+    flex-direction: row;
+}
+
+h2 {
+    color: green;
+}
