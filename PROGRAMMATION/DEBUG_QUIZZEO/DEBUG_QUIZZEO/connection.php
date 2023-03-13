@@ -30,6 +30,7 @@
             <div class="case">
                 <label>Nom d'utilisateur :</label>
                 <input type="text" name="username" required><br>
+                <div class="ligne"></div>
                 <label>Mot de passe :</label>
                 <input type="password" name="password" required><br>
             </div>
@@ -37,6 +38,11 @@
         </div>
     </form>
 
+    <!-- <footer>
+            <div class="messagedefilant">
+                <div data-text="---Site créé dans le cadre d'un projet développement web par Loris LAURENTI, Rémi KORZENIOWSKI et Théo MENANT--FERRY pour l'école Ipssi.---"><span>---Site créé dans le cadre d'un projet développement web par Loris LAURENTI, Rémi KORZENIOWSKI et Théo MENANT--FERRY pour l'école Ipssi.---</span></div>
+              </div>
+    </footer> -->
 
 
     <script>
