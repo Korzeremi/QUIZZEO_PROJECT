@@ -15,16 +15,22 @@
             <div class="logo">
                 <img src="logo.png" alt="logo">
             </div>
-            <div class="mode_btn">
+            <!-- <div class="mode_btn">
                         <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
-                    <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
-            </div>
+                    <input type="checkbox" name="theme-mode" class="checkbox">
+            </div> -->
             </div>
         </section>
 
     </header>
+
+    <div class="button">
+        <a href="admin_homepage.php"><button class="subscribebtn" type="button" value="Page d'accueil" class="button_head">Page d'accueil</button></a>
+    </div>
     
-<?php
+<div class="php">
+    <div class="php2">
+        <?php
     $server="localhost";
     $username="root";
     $password="root";
@@ -78,13 +84,13 @@
     }
     $conn->close();
 ?>
-
-
-<div class="button">
-    <br><a href="connection.php"><input type="button" value="Retour à la page de connexion"></a>
+    </div>
 </div>
 
-<script>
+
+
+
+<!-- <script>
     const html = document.getElementsByTagName("html")[0];
     const themeSwicth = document.getElementById("themeLogo");
     themeSwicth.addEventListener("click", () => {
@@ -95,7 +101,7 @@
         themeSwicth.innerHTML = 'DARK'.fontsize(4);
     }
 });
-</script> 
+</script>  -->
 
 </body>
 </html>

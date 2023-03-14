@@ -23,11 +23,11 @@
                         <a href="subscription.php" ><button class="subscribebtn">s'inscrire</button></a>
                         <a href="connection.php"><button class="subscribebtn">Se connecter</button></a>
                     </div>
-                    <div class="mode_btn">
+                    <!-- <div class="mode_btn">
                             <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
-                        <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
+                        <input type="checkbox" name="theme-mode" class="checkbox">
                     </div>
-                </div>
+                </div> -->
             </section>
     
         </header>

@@ -11,47 +11,49 @@
         <header>
             <div class="tete">
                 <div class="logo">
-                    <a href="homepage.php"><img src="logo.png" alt="logo"></a>
+                    <img src="logo.png" alt="logo">
                 </div>
-                <div class="mode_btn">
+                <!-- <div class="mode_btn">
                     <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
-                <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
-                </div>
+                <input type="checkbox" name="theme-mode" class="checkbox">
+                </div> -->
             </div>
         </header>
 
 
 
     <form action="subscription_status.php" method="post">
-        <div class="presentation">
-            <h1>INSCRIPTION</h1>
-        </div>
-
-        <div class="inscription">
-            <div class="case">
-                <label>Mail :</label>
-                <input type="text" name="mail" required><br>
-                <label>Nom d'utilisateur :</label>
-                <input type="text" name="username" required><br>
-                <label>Mot de passe :</label>
-                <input type="password" name="password" required><br>
-                <label>Type :</label>
-        
-                <select name="type" required>
-                    <option name="type" value="">aucun rôle </option>
-                    <option name="type" value="administrator">Administrateur</option>
-                    <option name="type" value="user">Utilisateur</option>
-                    <option name="type" value="quizzer">Quizzeur</option>
-                </select><br>
+        <div class="filtre">
+            <div class="presentation">
+                <h1>INSCRIPTION</h1>
             </div>
+    
+            <div class="inscription">
+                <div class="case">
+                    <label>Mail :</label>
+                    <input type="text" name="mail" required><br>
+                    <label>Nom d'utilisateur :</label>
+                    <input type="text" name="username" required><br>
+                    <label>Mot de passe :</label>
+                    <input type="password" name="password" required><br>
+                    <label>Type :</label>
             
-            <input type="submit" id="submit">
+                    <select name="type" required>
+                        <option name="type" value="">aucun rÃ´le </option>
+                        <option name="type" value="administrator">Administrateur</option>
+                        <option name="type" value="user">Utilisateur</option>
+                        <option name="type" value="quizzer">Quizzeur</option>
+                    </select><br>
+                </div>
+                
+                <input type="submit" id="submit">
+            </div>
         </div>
 
     </form>
 
 
-    <script>
+    <!-- <script>
         const html = document.getElementsByTagName("html")[0];
         const themeSwicth = document.getElementById("themeLogo");
         themeSwicth.addEventListener("click", () => {
@@ -62,7 +64,7 @@
             themeSwicth.innerHTML = 'DARK'.fontsize(4);
         }
     });
-    </script> 
+    </script>  -->
 
     </body>
 </html>

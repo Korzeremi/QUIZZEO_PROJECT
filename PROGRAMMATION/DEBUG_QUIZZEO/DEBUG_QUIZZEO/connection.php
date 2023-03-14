@@ -12,29 +12,31 @@
     <header>
         <div class="tete">
             <div class="logo">
-                <a href="homepage.php"><img src="logo.png" alt="logo"></a>
+                <img src="logo.png" alt="logo">
             </div>
             <div class="mode_btn">
-                <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
-            <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
-            </div>
+                <!-- <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
+            <input type="checkbox" name="theme-mode" class="checkbox">
+            </div> -->
         </div>
     </header>
 
 
     <form action="connection_status.php" method="post">
-        <div class="presentation">
-            <h1>CONNEXION</h1>
-        </div>
-        <div class="inscription">
-            <div class="case">
-                <label>Nom d'utilisateur :</label>
-                <input type="text" name="username" required><br>
-                <div class="ligne"></div>
-                <label>Mot de passe :</label>
-                <input type="password" name="password" required><br>
+        <div class="filtre">
+            <div class="presentation">
+                <h1>CONNEXION</h1>
             </div>
-            <input type="submit" value="Se connecter" id="submit">
+            <div class="inscription">
+                <div class="case">
+                    <label>Nom d'utilisateur :</label>
+                    <input type="text" name="username" required><br>
+                    <div class="ligne"></div>
+                    <label>Mot de passe :</label>
+                    <input type="password" name="password" required><br>
+                </div>
+                <input type="submit" value="Se connecter" id="submit">
+            </div>
         </div>
     </form>
 

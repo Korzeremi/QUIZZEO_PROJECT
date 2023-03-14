@@ -1,35 +1,22 @@
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--textcolor);
 }
 
-:root{
-    --bgcolor: #f2f2f2;
-    --textcolor: #0D0D0D;
-    --headercolor: #3671BF;
-    --headersecondarycolor: #27538C;
-    --maincolor: #A9D943;
-    --secondarycolor: #98BF45;
-}
+/* BODY ************************************************************************/
 
-
-/* HTML,body ************************************************************************/
-
-html {
-    color: var(--color1);
-}
-
-html.nuit {
-    /* --texte: white;
+/* html.nuit {
+    --texte: white;
     --color1: rgb(31, 29, 29);
     --color3: rgb(95, 86, 86);
     --color4: rgb(0, 0, 0);
-    --body: rgb(34, 34, 34); */
+    --body: rgb(34, 34, 34);
     --bgcolor: rgb(53, 51, 51);
-}
+} */
 
 body{
-    background-color: var(--bgcolor);
+    background: linear-gradient(217deg, rgb(230, 0, 0), rgba(255,0,0,0) 50%),
+    linear-gradient(127deg, rgba(0,255,0,1), rgba(0,230,0,0) 50%),
+    linear-gradient(336deg, rgba(0,0,255,1), rgba(0,0,230,0) 50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,27 +25,23 @@ body{
     width: 100%;
     margin-left: 0px;
     margin-top: 0px;
+    overflow: hidden;
 }
 
 /* HEADER ******************************************************************************/
 
 header {
     display: flex;
-    border: 1.5px solid black;
-    border-radius: 0 0 20px 20px;
-    padding: 0.1%;
-    margin-bottom: 2%;
-    width: 99.8%;
-    height: 7em;
-    background-color: var(--headercolor);
+    backdrop-filter: blur();
+    backdrop-filter: saturate(65%);
+    width: 100%;
+    height: 10%;
+    margin-bottom: 1%;
 }
-
-
 
 .tete {
     width: 100%;
     height: 100%;
-    /* border: 3px solid rgb(20, 20, 123); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,28 +52,69 @@ header {
 /* LOGO ****************************************************************/
 
 .logo {
-    /* border: 2px solid black; */
     height: 100%;
     margin: 0% 0% 0% 7%;
 }
 
 header > .tete > .logo > img {
-    width: 100%;
-    height: 100%;
+    width: 35%;
+}
+
+/* BUTTON CONNECT *******************************************************/
+
+.connect_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1%;
+    margin: 0% -2% 0% 35%;
+    height: 70%;
+    width: 30%;
+}
+
+.connect {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 14em;
+    height: 70%;
+    margin-right: 50px;
+}
+
+.subscribebtn{
+    background-color: var(--headersecondarycolor);
+    border: none;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    padding: 10px 10px;
+    opacity: 0.65;
+    transition: 0.15s;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.subscribebtn:hover{
+    opacity: 1;
+}
+
+header > .tete > .connect_btn > .connect > button {
+    width: 7em;
+    height: 3.5em;
 }
 
 /* DARK MODE  ************************************************************/
 
-.mode_btn {
-    /* border: 2px solid black; */
+/* .mode_btn {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 15%;
     height: 35%;
-} 
+}
 
-header > .tete > .mode_btn > button{
+header > .tete > .connect_btn > .mode_btn > button{
     width: 1em;
     height: 0.4em;
     display: flex;
@@ -102,39 +126,105 @@ header > .tete > .mode_btn > button{
 }
 
 
-header > .tete > .mode_btn > button > h3 {
+header > .tete > .connect_btn > .mode_btn > button > h3 {
     font-size: 20%;
-
+    margin: 0;
 }
 
 
-header > .tete > .mode_btn > button:hover{
+header > .tete > .connect_btn > .mode_btn > button:hover{
     cursor:pointer;
     border-radius: 20px;
-
     transition: all 0.5s ease-out;
+} */
 
-}
+/* CONNECTION ************************************************************************/
 
-/* BUTTON ********************************************************************************/
-
-.button{
-    /* border: 2px solid black; */
-    width: 40%;
-    height: 5em;
+.presentation {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    margin: 3% 3% 5% 3%;
+}
+
+.presentation > h1 {
+    color: rgb(30, 77, 159);
+    font-size: 3.5em;
     
-
 }
 
-.button_ajout:hover{
-    cursor: pointer;
+.inscription {
+    padding: 5%;
+    width: 35em;
+    height: 28em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* box-shadow: 9px 4px 22px 3px rgba(0,0,0,0.65);
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 20px; */
 }
 
-.button > a > .button_ajout {
-    width: 13em;
+.case {
+    /* border: 2px solid black; */
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+label{
+    display: flex;
+    margin-bottom: 20px;
+    /* text-decoration: underline; */
+}
+
+.inscription > .case > input {
+    height: 1.5em;
+    width: 20em;
+    padding: 1%;
+    font-size: 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
+
+/* .ligne {
+    border: 1px solid black;
+    margin-top: -6%;
+} */
+
+#submit {
+    width: 50%;
     height: 3em;
+    font-size: 1.3em;
+    border-radius: 20px;
+    background-color: var(--button);
+    /* margin-left: 7em; */
+}
 
+.filtre{
+    backdrop-filter: blur(50em);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+}
+
+
+.php {
+    display: flex;
+    justify-content: center;
+    height: 40em;
+    width: 90%;
+    margin-top: 2%;
+}
+
+.php2 {
+    width: auto;
+    height: 10em;
 }

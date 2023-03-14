@@ -12,16 +12,16 @@
     <header>
         <div class="tete">
             <div class="logo">
-                <a href="admin_homepage.php"><img src="logo.png" alt="logo"></a>
+                <img src="logo.png" alt="logo">
             </div>
             <div class="connect_btn">
                 <div class="connect">
-                    <a href="disconnect.php"><input type="button" value="Se déconnecter" class="button_head"></a>
+                    <a href="disconnect.php"><button class="subscribebtn">se déconnecter</button></a>
                 </div>
-                <div class="mode_btn">
+                <!-- <div class="mode_btn">
                     <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
-                    <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
-                </div>
+                    <input type="checkbox" name="theme-mode" class="checkbox">
+                </div> -->
             </div>
         </div>
     </header>
@@ -30,20 +30,24 @@
             <a href="user_homepage.php"><input type="button" value="Page d'accueil" class="button_ajout"></a>
         </div>
 
-    <?php
-        session_start();
-        echo "<h1>Bienvenue " . $_SESSION['username'] ."</h1>";
-        echo "<img alt='profile_pic.png'>";
-        echo "<br>Votre adresse email est : " . $_SESSION['email'];
-        echo " " . "<a href=''>Modifier mon adresse mail</a>";
-        echo "<br>Votre pseudo est : " . $_SESSION['username'];
-        echo " " . "<a href=''>Modifier mon nom d'utilisateur</a>";
-        echo "<br>Votre mot de passe est : " . $_SESSION['password'];
-        echo " " . "<a href=''>Modifier mon mot de passe</a>";
-        echo "<br>Votre type de compte est : " . $_SESSION['type'];
-    ?>
+        <div class="php">
+            <div class="php2">
+                <?php
+                session_start();
+                echo "<h1>Bienvenue " . $_SESSION['username'] ."</h1>";
+                echo "<img alt='profile_pic.png'>";
+                echo "<br>Votre adresse email est : " . $_SESSION['email'];
+                echo " " . "<a href=''>Modifier mon adresse mail</a>";
+                echo "<br>Votre pseudo est : " . $_SESSION['username'];
+                echo " " . "<a href=''>Modifier mon nom d'utilisateur</a>";
+                echo "<br>Votre mot de passe est : " . $_SESSION['password'];
+                echo " " . "<a href=''>Modifier mon mot de passe</a>";
+                echo "<br>Votre type de compte est : " . $_SESSION['type'];
+                ?>
+            </div>
+        </div>
 
-    <script>
+    <!-- <script>
         const html = document.getElementsByTagName("html")[0];
         const themeSwicth = document.getElementById("themeLogo");
         themeSwicth.addEventListener("click", () => {
@@ -54,7 +58,7 @@
             themeSwicth.innerHTML = 'DARK'.fontsize(4);
         }
     });
-    </script> 
+    </script>  -->
     
 </body>
 </html>

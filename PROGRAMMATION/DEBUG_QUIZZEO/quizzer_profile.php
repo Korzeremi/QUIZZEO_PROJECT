@@ -47,7 +47,7 @@
         echo "<br>Votre type de compte est : " . $_SESSION['type'];
     ?>
 
-    <script>
+    <!-- <script>
         const html = document.getElementsByTagName("html")[0];
         const themeSwicth = document.getElementById("themeLogo");
         themeSwicth.addEventListener("click", () => {
@@ -58,7 +58,7 @@
             themeSwicth.innerHTML = 'DARK'.fontsize(4);
         }
     });
-    </script>  
+    </script>   -->
     
 </body>
 </html>

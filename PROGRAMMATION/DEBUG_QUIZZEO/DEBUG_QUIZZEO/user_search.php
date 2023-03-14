@@ -6,26 +6,57 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="homepage.css">
+        <link rel="stylesheet" type="text/css" href="user_search.css">
         <title>ACCUEIL QUIZZEO </title>
     </head>
 
     <body>
 
-        <navbar>
-        <a href="user_homepage.php"><img alt="logo"></a>
-        <a href="disconnect.php"><input type="button" value="Se déconnecter"></a>
-        <a href="user_homepage.php"><input type="button" value="Page d'accueil"></a>
-            <span class="mode_btn">
-                <input type="checkbox" name="theme-mode">
-                <span class="slider"></span>
-            </span>
-        </navbar>
+        <header>
+            <div class="tete">
+                <div class="logo">
+                    <img src="logo.png" alt="logo">
+                </div>
+                <div class="connect_btn">
+                    <div class="connect">
+                        <a href="disconnect.php"><button class="subscribebtn">se déconnecter</button></a>
+                    </div>
+                    <!-- <div class="mode_btn">
+                        <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
+                        <input type="checkbox" name="theme-mode" class="checkbox">
+                    </div>
+                </div> -->
+            </div>
+        </header>
 
-        <form method="post">
-            <input type="text" id="searchbar" name="searchbar">
-            <input type="submit" value="Rechercher"></input>
-        </form>
+        <div class="button">
+            <a href="user_homepage.php"><input type="button" value="Page d'accueil" class="button_ajout"></a>
+        </div>
+
+
+        <div class="navbar">
+            <div class="h2">
+                <a href="homepage.php"><h2>Nos quizs</h2></a>
+            </div>
+            <div class="searchform">
+                <form action="homepage_search.php" method="post">
+                    <input class="searchbar" type="text" id="searchbar" name="searchbar" placeholder="Rechercher par nom">
+                    <input class="searchbtn" type="submit" value="Rechercher"></input>
+                </form>
+            </div>
+            <div class="sortbyselect">
+                <select class="sortby" name="sortby" id="sortbyselectid">
+                    <option selected="" value="">Trier par</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div>
+        </div>
+        
 
         <?php
             $server="localhost";

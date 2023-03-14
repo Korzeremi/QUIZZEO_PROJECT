@@ -23,11 +23,11 @@
                     <a href="subscription.php" ><button class="subscribebtn">s'inscrire</button></a>
                     <a href="connection.php"><button class="subscribebtn">Se connecter</button></a>
                 </div>
-                <div class="mode_btn">
+                <!-- <div class="mode_btn">
                         <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
-                    <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
+                    <input type="checkbox" name="theme-mode" class="checkbox">
                 </div>
-            </div>
+            </div> -->
         </section>
 
     </header>
@@ -51,9 +51,9 @@
                 </select>
             </div>
         </div>
-        <!-- <div class="grid">
+        <div class="grid">
             <div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div>
-        </div> -->
+        </div>
 
         <?php
             $server="localhost";
@@ -72,15 +72,11 @@
             $res=$conn->query($req);
 
             if($res->num_rows > 0){
-                echo "<div class='grid'>";
                 while($row=$res->fetch_assoc()){
-                    echo "<div class='quiz'>";
                     echo "<br>" . "Nom du quiz : " . $row["titre"];
                     echo " - Difficulté : " . $row["difficulte"];
                     echo " - Date de création : " . $row['date_creation'] . "<br>";
-                    echo "</div>";
                 }
-                echo "</div>";
             }else{
                 echo " ";
             }
@@ -88,7 +84,7 @@
             $conn->close();
         ?>
 
-        <script>
+        <!-- <script>
             const html = document.getElementsByTagName("html")[0];
             const themeSwicth = document.getElementById("themeLogo");
             themeSwicth.addEventListener("click", () => {
@@ -99,7 +95,7 @@
                 themeSwicth.innerHTML = 'DARK'.fontsize(4);
             }
         });
-        </script>  
+        </script>   -->
 
 </body>
     

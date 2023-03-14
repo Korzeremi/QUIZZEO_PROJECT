@@ -15,42 +15,48 @@
             <div class="logo">
                 <img src="logo.png" alt="logo">
             </div>
-            <div class="mode_btn">
+            <!-- <div class="mode_btn">
                         <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
-                    <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
-            </div>
+                    <input type="checkbox" name="theme-mode" class="checkbox">
+            </div> -->
             </div>
         </section>
 
     </header>
 
-<?php
-    $server="localhost";
-    $username="root";
-    $password="root";
-    $db="quizzeo";
+    <div class="button">
+        <a href="admin_homepage.php"><button class="subscribebtn" type="button" value="Page d'accueil" class="button_head">Page d'accueil</button></a>
+    </div>
 
-    $conn=new mysqli($server,$username,$password,$db);
+    <div class="php">
+        <div class="php2">
+            <?php
+            $server="localhost";
+            $username="root";
+            $password="root";
+            $db="quizzeo";
+        
+            $conn=new mysqli($server,$username,$password,$db);
+        
+            if($conn->connect_error) {
+                die("Connexion échouée: " . $conn->connect_error);
+            }
+        
+            $username=$_POST['username'];
+            $mail=$_POST['mail'];
+            $password=$_POST['password'];
+            $type=$_POST['type'];
+        
+            $req="INSERT INTO utilisateur(pseudo, email, password, role) VALUES ('$username','$mail','$password','$type')";
+            $res=$conn->query($req);
+            echo "L'utilisateur " . $_POST['username'] . " a bien été inscrit !";
+            echo "<br> Merci de vous connecter pour valider l'inscription !<br>";
+            $conn->close();
+            ?>
+        </div>
 
-    if($conn->connect_error) {
-        die("Connexion échouée: " . $conn->connect_error);
-    }
+    </div>
 
-    $username=$_POST['username'];
-    $mail=$_POST['mail'];
-    $password=$_POST['password'];
-    $type=$_POST['type'];
-
-    $req="INSERT INTO utilisateur(pseudo, email, password, role) VALUES ('$username','$mail','$password','$type')";
-    $res=$conn->query($req);
-    echo "L'utilisateur " . $_POST['username'] . " a bien été inscrit !";
-    echo "<br> Merci de vous connecter pour valider l'inscription !<br>";
-    $conn->close();
-?>
-
-<div class="button">
-    <a href="homepage.php"><input type="button" value="Retourner à l'accueil" class="button_ajout"></a>
-</div>
 
 <script>
     const html = document.getElementsByTagName("html")[0];

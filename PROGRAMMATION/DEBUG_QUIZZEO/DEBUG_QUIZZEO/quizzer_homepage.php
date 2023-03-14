@@ -11,16 +11,16 @@
     <header>
         <div class="tete">
             <div class="logo">
-                <a href="admin_homepage.php"><img src="logo.png" alt="logo"></a>
+                <img src="logo.png" alt="logo">
             </div>
             <div class="connect_btn">
                 <div class="connect">
-                    <a href="disconnect.php"><input type="button" value="Se déconnecter" class="button_head"></a>
+                    <a href="disconnect.php"><button class="subscribebtn">Se connecter</button></a>
                 </div>
-                <div class="mode_btn">
+                <!-- <div class="mode_btn">
                     <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
-                    <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
-                </div>
+                    <input type="checkbox" name="theme-mode" class="checkbox">
+                </div> -->
             </div>
         </div>
     </header>
@@ -53,6 +53,11 @@
     </div>
 
     <h2>Page d'accueil quizzer</h2>
+    <div class="grid">
+        <div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div><div class="quiz"></div>
+    </div>
+
+
     <?php   
         session_start();
         echo "Bienvenue " . $_SESSION['username'] . "<br>";
@@ -73,15 +78,11 @@
             $res=$conn->query($req);
 
             if($res->num_rows > 0){
-                echo "<div class='grid'>";
                 while($row=$res->fetch_assoc()){
-                    echo "<div class='quiz'>";
                     echo "<br>" . "Nom du quiz: " . $row["titre"];
                     echo " - Difficulté: " . $row["difficulte"];
                     echo " - Date de création: " . $row['date_creation'] . "<br>";
-                    echo "</div>";
                 }
-                echo "</div>";
             }else{
                 echo " ";
             }
@@ -89,7 +90,7 @@
             $conn->close();
         ?>
 
-    <script>
+    <!-- <script>
         const html = document.getElementsByTagName("html")[0];
         const themeSwicth = document.getElementById("themeLogo");
         themeSwicth.addEventListener("click", () => {
@@ -100,7 +101,7 @@
             themeSwicth.innerHTML = 'DARK'.fontsize(4);
         }
     });
-    </script> 
+    </script>  -->
 
 </body>
 </html>
