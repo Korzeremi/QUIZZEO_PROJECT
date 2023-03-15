@@ -27,10 +27,6 @@
                     <div class="connect">
                         <a href="disconnect.php"><input type="button" value="Se déconnecter" class="button_head"></a>
                     </div>
-                    <div class="mode_btn">
-                        <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
-                        <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
-                    </div>
                 </div>
             </div>
             </header>
