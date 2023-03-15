@@ -1,3 +1,4 @@
+<!-- This page permit visitor to disconnect -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,8 +8,11 @@
     <title>DECONNEXION</title>
 </head>
 <?php
+    // Starting session cookies
     session_start();
+    // Destroying actual session cookies
     session_destroy();
+    // Redirecting to homepage.php
     header('location: homepage.php');
 ?>
 </html>

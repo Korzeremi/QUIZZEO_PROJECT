@@ -1,31 +1,34 @@
-<!-- This page allows you to search for the quizs -->
+<!-- This page is displayed when a user is not connected -->
 <!DOCTYPE html>
     <html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="CSS/admin_search.css">
-        <title>PAGE D'ACCUEIL </title>
+        <link rel="stylesheet" type="text/css" href="CSS/homepage.css">
+        <title>ACCUEIL QUIZZEO </title>
+
     </head>
-    <body>
-        <header>
-            <div class="tete">
-                <div class="logo">
-                    <a href="admin_homepage.php"><img src="MEDIA/logo.png" alt="logo"></a>
-                </div>
-                <div class="connect_btn">
-                    <div class="connect">
-                        <a href="disconnect.php"><input type="button" value="Se déconnecter" class="button_head"></a>
-                    </div>
-                </div>
+<body>
+    <header>
+        <section class="tete">
+            <!-- <h1>QUIZZEO</h1> -->
+            <div class="logo">
+                <img src="MEDIA/logo.png" alt="logo">
             </div>
-        </header>
-        <div class="button">
-            <a href="admin_homepage.php"><input type="button" value="Page d'accueil" class="button_ajout" ></a>
-            <a href="admin_panel.php"><input type="button" value="Panneau d'administration" class="button_ajout"></a>
-        </div>
-        <div class="navbar">
+            <div class="connect_btn">
+                <div class="connect">
+                    <a href="subscription.php" ><button class="subscribebtn">s'inscrire</button></a>
+                    <a href="connection.php"><button class="subscribebtn">Se connecter</button></a>
+                </div>
+                <!-- <div class="mode_btn">
+                        <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
+                    <input type="checkbox" name="theme-mode" class="checkbox">
+                </div> -->
+            </div>
+        </section>
+    </header>
+    <div class="navbar">
             <div class="h2">
                 <a href="homepage.php"><h2>Nos quizs</h2></a>
             </div>
@@ -39,11 +42,15 @@
 
         <?php
 
-            // Call for session cookies containing important information, including the type of user
             session_start();
-
-            // If admin
+            // redirection
             if($_SESSION['type'] == 'administrator'){
+                header('Location: admin_homepage.php');
+            }elseif($_SESSION['type'] == 'quizzer'){
+                header('Location: quizzer_homepage.php');
+            }elseif($_SESSION['type'] == 'user'){
+                header('Location: user_homepage.php');
+            }
 
             // Infos for db link
             $server="localhost";
@@ -51,43 +58,34 @@
             $password="root";
             $db="quizzeo";
 
-            // Link to db
+            // Db link
             $conn = new mysqli($server,$username,$password,$db);
 
-            // If link to db failed, showing error
+            // If link failed, show message
             if($conn->connect_error) {
                 die("Connexion échouée: " . $conn->connect_error);
             }
 
-            // Attribute input value for $search variable
-            if(isset($_POST['searchbar'])){
-                $search=$_POST['searchbar'];
-            }
-
-            // sending request to db to search quiz
-            $req="SELECT * FROM quizz WHERE titre LIKE '%$search%'";
+            // Sending request to select all quiz from db
+            $req="SELECT * FROM quizz";
             $res=$conn->query($req);
 
-            // If quizs exist, showing them in grid
+            // If quiz exists, showing them in grid
             if($res->num_rows > 0){
-                echo '<div class="grid">';
+                echo "<div class='grid'>";
                 while($row=$res->fetch_assoc()){
-                    echo "<a href='quiz.php?id=". $row['id'] ."'>";
-                    echo '<div class="quiz">';
+                    echo "<div class='quiz'>";
                     echo '<img style="position: relative; width: 180px;" class="bg" src="MEDIA/quiz.png" alt="IMG_BG">';
-                    echo "Nom du quiz: " . $row["titre"];
-                    echo " - Difficulté: " . $row["difficulte"];
-                    echo '"</div>"';
+                    echo "<br>" . "Nom du quiz : " . $row["titre"];
+                    echo " - Difficulté : " . $row["difficulte"];
+                    echo "</div>";
                 }
                 echo "</div>";
             }else{
-                echo "Aucun quiz trouvé.";
+                echo " ";
             }
             
             $conn->close();
-        } else { // Redirection if not admin
-            Header("Location: error.html");
-        }
         ?>
 
         <!-- <script>
@@ -103,6 +101,6 @@
         });
         </script>   -->
 
-    </body>
+</body>
     
 </html>

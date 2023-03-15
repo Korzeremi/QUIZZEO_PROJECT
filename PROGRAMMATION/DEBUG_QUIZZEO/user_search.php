@@ -1,7 +1,6 @@
+<!-- Allows you to search in user -->
 <!DOCTYPE html>
-
     <html lang="fr">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,9 +8,7 @@
         <link rel="stylesheet" type="text/css" href="homepage.css">
         <title>ACCUEIL QUIZZEO </title>
     </head>
-
     <body>
-
         <navbar>
         <a href="user_homepage.php"><img alt="logo"></a>
         <a href="disconnect.php"><input type="button" value="Se déconnecter"></a>
@@ -28,13 +25,17 @@
         </form>
 
         <?php
+            // calling seesion cookies
+            session_start();
+            // infos for db links
+            if($_SESSION['type']=="user"){
             $server="localhost";
             $username="root";
             $password="root";
             $db="quizzeo";
-
+            //db link
             $conn = new mysqli($server,$username,$password,$db);
-
+            // display error if link failed
             if($conn->connect_error) {
                 die("Connexion échouée: " . $conn->connect_error);
             }
@@ -46,23 +47,32 @@
             $req="SELECT * FROM quizz WHERE titre LIKE '%$search%'";
             $res=$conn->query($req);
 
+            // if quiz exist, show them in grid
             if($res->num_rows > 0){
+                echo '<div class="grid">';
                 while($row=$res->fetch_assoc()){
+                    echo "<a href='quiz.php?id=". $row1['id'] ."'>";
+                    echo '<div class="quiz">';
+                    echo '<img style="position: relative; width: 180px;" class="bg" src="MEDIA/quiz.png" alt="IMG_BG">';
                     echo "Nom du quiz: " . $row["titre"];
                     echo " - Difficulté: " . $row["difficulte"];
-                    echo " - Date de création: " . $row['date_creation'] . "<br>";
+                    echo '</div>';
                 }
+                echo "</div>";
             }else{
                 echo "Aucun quiz trouvé.";
             }
             
             $conn->close();
+        }else{
+            header("Location: error.html");
+        }
         ?>
 
-        <script>
+        <!-- <script>
             function setDarkMode(Event){
             }
-        </script>
+        </script> -->
 
     </body>
     

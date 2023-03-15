@@ -1,27 +1,24 @@
+<!-- This page allows a visitor to register -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="subscription.css">
+    <link rel="stylesheet" href="CSS/subscription.css">
     <title>INSCRIPTION</title>
 </head>
     <body>
         <header>
             <div class="tete">
                 <div class="logo">
-                    <a href="homepage.php"><img src="logo.png" alt="logo"></a>
-                </div>
-                <div class="mode_btn">
-                    <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
-                <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
+                    <a href="homepage.php"><img src="MEDIA/logo.png" alt="logo"></a>
                 </div>
             </div>
         </header>
 
 
-
+    <!-- // form POST method to send data to subscription_status.php -->
     <form action="subscription_status.php" method="post">
         <div class="presentation">
             <h1>INSCRIPTION</h1>
@@ -39,7 +36,7 @@
         
                 <select name="type" required>
                     <option name="type" value="">aucun rôle </option>
-                    <option name="type" value="administrator">Administrateur</option>
+                    <!-- <option name="type" value="administrator">Administrateur</option> -->
                     <option name="type" value="user">Utilisateur</option>
                     <option name="type" value="quizzer">Quizzeur</option>
                 </select><br>
@@ -51,7 +48,7 @@
     </form>
 
 
-    <script>
+    <!-- <script>
         const html = document.getElementsByTagName("html")[0];
         const themeSwicth = document.getElementById("themeLogo");
         themeSwicth.addEventListener("click", () => {
@@ -62,7 +59,7 @@
             themeSwicth.innerHTML = 'DARK'.fontsize(4);
         }
     });
-    </script> 
+    </script>  -->
 
     </body>
 </html>

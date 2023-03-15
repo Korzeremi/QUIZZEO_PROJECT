@@ -1,10 +1,11 @@
+<!-- This page permit the connection of visitor -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="connection.css">
+    <link rel="stylesheet" href="CSS/connection.css">
     <title>CONNEXION</title>
 </head>
 <body>
@@ -12,16 +13,12 @@
     <header>
         <div class="tete">
             <div class="logo">
-                <a href="homepage.php"><img src="logo.png" alt="logo"></a>
-            </div>
-            <div class="mode_btn">
-                <button for="themeSwitch" id="themeLogo" style="font-size: 90px;"><h3>DARK</h3></button>
-            <!-- <input type="checkbox" name="theme-mode" class="checkbox"> -->
+                <a href="homepage.php"><img src="MEDIA/logo.png" alt="logo"></a>
             </div>
         </div>
     </header>
 
-
+    <!-- Form POST method used to tranfer data to connection_status.php -->
     <form action="connection_status.php" method="post">
         <div class="presentation">
             <h1>CONNEXION</h1>
@@ -39,7 +36,7 @@
 
 
 
-    <script>
+    <!-- <script>
         const html = document.getElementsByTagName("html")[0];
         const themeSwicth = document.getElementById("themeLogo");
         themeSwicth.addEventListener("click", () => {
@@ -50,7 +47,7 @@
             themeSwicth.innerHTML = 'DARK'.fontsize(4);
         }
     });
-    </script> 
+    </script>  -->
 
 </body>
 </html>
